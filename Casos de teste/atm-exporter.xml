@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10002</projectId>
+    <projectKey>SWAG</projectKey>
+    <exportDate>2023-01-05 03:39:08 UTC</exportDate>
+    <folders>
+        <folder fullPath="Login" index="0"/>
+        <folder fullPath="Meus pedidos" index="2"/>
+        <folder fullPath="Painel de usuário" index="1"/>
+    </folders>
+    <testCases>
+        <testCase id="77570701" key="SWAG-T1" paramType="PARAMETER">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Talita Molina Mantovani</createdBy>
+            <createdOn>2023-01-02 09:53:42 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues>
+                <issue>
+                    <key>SWAG-1</key>
+                    <summary><![CDATA[Autenticação de usuário]]></summary>
+                </issue>
+                <issue>
+                    <key>SWAG-2</key>
+                    <summary><![CDATA[Como usuário desejo acessar a tela de login na loja virtual a fim de visualizar opções de login, cadastro e redefinição de senha]]></summary>
+                </issue>
+                <issue>
+                    <key>SWAG-3</key>
+                    <summary><![CDATA[Como usuário desejo preencher formulário de criação de conta na loja virtual]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Login]]></name>
+            <objective><![CDATA[Verificar funcionalidade de login]]></objective>
+            <owner>60a4452f5998a6006866eea9</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters>
+                <parameter index="0">
+                    <defaultValue><![CDATA[172.00.0.00]]></defaultValue>
+                    <name><![CDATA[ServidorQA]]></name>
+                </parameter>
+            </parameters>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar url https://www.saucedemo.com/]]></description>
+                        <expectedResult><![CDATA[Cliente visualiza tela de login]]></expectedResult>
+                        <testData><![CDATA[ServidorQA]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita username no campo Username]]></description>
+                        <expectedResult><![CDATA[Digitar o username no campo Username]]></expectedResult>
+                        <testData><![CDATA[standard_user]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita a senha no campo Password]]></description>
+                        <expectedResult><![CDATA[Digitar a senha no campo Password]]></expectedResult>
+                        <testData><![CDATA[locked_out_user]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio clica no bot&atilde;o Login]]></description>
+                        <expectedResult><![CDATA[<em></em>Realizada autentica&ccedil;&atilde;o e caso os dados estiverem corretos faz o login no site]]></expectedResult>
+                        <testData><![CDATA[Clique bot&atilde;o]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="77570709" key="SWAG-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Talita Molina Mantovani</createdBy>
+            <createdOn>2023-01-02 09:54:18 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues>
+                <issue>
+                    <key>SWAG-1</key>
+                    <summary><![CDATA[Autenticação de usuário]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Criação de cadastro e senha]]></name>
+            <owner>60a4452f5998a6006866eea9</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given Cliente está na tela de login
+
+And cliente não cadastrado no site
+
+When clicar em nova conta
+
+Then Será redirecionado para tela de cadastro]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="77570996" key="SWAG-T3" paramType="PARAMETER">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Talita Molina Mantovani</createdBy>
+            <createdOn>2023-01-02 09:59:36 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues>
+                <issue>
+                    <key>SWAG-1</key>
+                    <summary><![CDATA[Autenticação de usuário]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Cliente sem cadastro tenta fazer login]]></name>
+            <owner>60a4452f5998a6006866eea9</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters>
+                <parameter index="0">
+                    <defaultValue><![CDATA[172.00.0.00]]></defaultValue>
+                    <name><![CDATA[Servidor QA]]></name>
+                </parameter>
+            </parameters>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar url https://www.saucedemo.com/]]></description>
+                        <expectedResult><![CDATA[Cliente visualiza tela de login]]></expectedResult>
+                        <testData><![CDATA[Servidor QA]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita username no campo Username]]></description>
+                        <expectedResult><![CDATA[Aparecer o username no campo Username]]></expectedResult>
+                        <testData><![CDATA[standard_user ]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita a senha no campo Password]]></description>
+                        <expectedResult><![CDATA[Campo login mant&eacute;m a senha digitada]]></expectedResult>
+                        <testData><![CDATA[locked_out_user ]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio clica no bot&atilde;o Login]]></description>
+                        <expectedResult><![CDATA[Realizada autentica&ccedil;&atilde;o e caso os dados estiverem corretos faz o login no site, caso os dados estiverem incorretos mostra a mensagem &quot;Login n&atilde;o encontrado, verifique os dados e tente novamente&quot;]]></expectedResult>
+                        <testData><![CDATA[Clique bot&atilde;o]]></testData>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio clica no bot&atilde;o login novamente]]></description>
+                        <expectedResult><![CDATA[&quot;Login n&atilde;o encontrado, verifique os dados e tente novamente. Caso n&atilde;o tenha uma conta, clique no bot&atilde;o &quot;Criar nova conta&quot;]]></expectedResult>
+                        <testData><![CDATA[3 tentativas<br /><br />]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="77691834" key="SWAG-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Talita Molina Mantovani</createdBy>
+            <createdOn>2023-01-04 23:15:49 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Painel de usuário]]></folder>
+            <issues/>
+            <labels>
+                <label><![CDATA[sprint1]]></label>
+                <label><![CDATA[Web]]></label>
+            </labels>
+            <name><![CDATA[Teste painel de usuário]]></name>
+            <owner>60a4452f5998a6006866eea9</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente esteja logado no site
+
+And esteja na página inicial da plataforma
+
+When clicar no icone com seu nome
+
+Then será redirecionado para a área Painel de usuário]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="77691860" key="SWAG-T5" paramType="PARAMETER">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Talita Molina Mantovani</createdBy>
+            <createdOn>2023-01-04 23:17:31 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Meus pedidos]]></folder>
+            <issues/>
+            <labels>
+                <label><![CDATA[Sprint]]></label>
+                <label><![CDATA[Web]]></label>
+                <label><![CDATA[pedidos]]></label>
+                <label><![CDATA[painel]]></label>
+            </labels>
+            <name><![CDATA[Teste painel de pedidos]]></name>
+            <objective><![CDATA[Verificar funcionalidade do painel de controle<br /><br />]]></objective>
+            <owner>60a4452f5998a6006866eea9</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters>
+                <parameter index="0">
+                    <defaultValue><![CDATA[111 .11.11.11]]></defaultValue>
+                    <name><![CDATA[Servidor Dev]]></name>
+                </parameter>
+                <parameter index="1">
+                    <defaultValue><![CDATA[000.00.00.00]]></defaultValue>
+                    <name><![CDATA[Servidor QA]]></name>
+                </parameter>
+            </parameters>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio acessa o site atrav&eacute;s de autentica&ccedil;&atilde;o de usu&aacute;rio e senha]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio visualiza p&aacute;gina inicial do site e seu nome de usu&aacute;rio no canto superior direito da tela]]></expectedResult>
+                        <testData><![CDATA[<var>Servidor QA</var> ]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio clica no seu nome no canto superior direito da tela]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio visualiza &aacute;rea do site chamada Painel de usu&aacute;rio<br /><br />]]></expectedResult>
+                        <testData><![CDATA[<var>Servidor QA</var> ]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio clica no bot&atilde;o &quot;Meus pedidos&quot;]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio visualiza a sua lista de pedidos]]></expectedResult>
+                        <testData><![CDATA[<var>Servidor QA</var>&nbsp;]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="77695033" key="SWAG-T6">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Talita Molina Mantovani</createdBy>
+            <createdOn>2023-01-05 02:51:39 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Meus pedidos]]></folder>
+            <issues/>
+            <labels>
+                <label><![CDATA[sprint1]]></label>
+                <label><![CDATA[pedidos]]></label>
+            </labels>
+            <name><![CDATA[Selecionar pedido]]></name>
+            <owner>60a4452f5998a6006866eea9</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o usuário esteja no painel de pedidos
+
+And não esteja visualizando os detalhes do pedido
+
+When clicar no número de algum pedido
+
+Then visualizará os dados do pedido em questão]]></details>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
